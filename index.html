@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashback Arrestor Selector by Gas and Thread | FHtorch</title>
+<meta name="description" content="Free flashback arrestor selector: find regulator, torch and hose-line models by gas and thread, with max flow and inlet pressure. Open data by FHtorch.">
+<meta property="og:title" content="Flashback Arrestor Selector by Gas and Thread | FHtorch">
+<meta property="og:description" content="Pick a flashback arrestor or check valve by gas, mounting position and connection thread. Open data from FHtorch, an oxy-fuel torch factory in Ningbo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fhtorch.github.io/flashback-arrestor-selector/">
+<meta property="og:image" content="https://fhtorch.github.io/flashback-arrestor-selector/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FHtorch flashback arrestor selector">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flashback Arrestor Selector by Gas and Thread | FHtorch">
+<meta name="twitter:description" content="Pick a flashback arrestor or check valve by gas, mounting position and connection thread. Open data from FHtorch, an oxy-fuel torch factory in Ningbo.">
+<meta name="twitter:image" content="https://fhtorch.github.io/flashback-arrestor-selector/social-card.png">
+<link rel="canonical" href="https://fhtorch.github.io/flashback-arrestor-selector/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "FHtorch flashback arrestors and check valves",
+  "description": "Models, gases, mounting positions, inlet and outlet threads, max flow and max inlet pressure of FHtorch 288, B288, 388, 488, 588 and H188 oxy-fuel flashback arrestors and 88-3 check valves, taken from FHtorch product pages.",
+  "url": "https://fhtorch.github.io/flashback-arrestor-selector/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "keywords": ["flashback arrestor", "flashback arrestor selector", "regulator flashback arrestor", "torch flashback arrestor", "check valve", "oxy-fuel safety"],
+  "creator": {"@type": "Organization", "name": "FHtorch", "url": "https://fhtorch.com"},
+  "distribution": [
+    {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fhtorch.github.io/flashback-arrestor-selector/data/flashback-arrestors.csv"},
+    {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://fhtorch.github.io/flashback-arrestor-selector/data/flashback-arrestors.json"}
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d1d1f; --muted: #5f6368; --line: #dfe3e8;
+    --brand: #0b4aa2; --brand-2: #1a73e8; --accent: #e8f0fe; --ox: #e8f0fe; --ox-text: #0b4aa2; --fuel: #fce8e6; --fuel-text: #a50e0e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111418; --card: #1a1f26; --text: #e8eaed; --muted: #a0a6ad; --line: #2c333c;
+            --brand: #7cb3ff; --brand-2: #8ab4f8; --accent: #1d2a3d; --ox: #1d2a3d; --ox-text: #8ab4f8; --fuel: #3a1f1f; --fuel-text: #f28b82; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 28px 0 8px; }
+  .brand { font-weight: 700; color: var(--brand); text-decoration: none; letter-spacing: .2px; }
+  h1 { font-size: clamp(24px, 4.6vw, 34px); line-height: 1.2; margin: 6px 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 18px; max-width: 780px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 14px 0; }
+  form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; align-items: end; }
+  label { display: block; font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+  select { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px;
+           background: var(--card); color: var(--text); }
+  .summary { margin: 14px 0 8px; font-weight: 600; }
+  .note { color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 13px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+  td.nw { white-space: nowrap; }
+  .scroll { overflow-x: auto; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--accent); color: var(--brand); white-space: nowrap; }
+  .gas { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; white-space: nowrap; font-weight: 600; }
+  .gas.ox { background: var(--ox); color: var(--ox-text); }
+  .gas.fuel { background: var(--fuel); color: var(--fuel-text); }
+  a { color: var(--brand-2); }
+  h2 { font-size: 22px; margin: 26px 0 6px; }
+  h3 { font-size: 18px; margin: 18px 0 4px; }
+  ul.where { padding-left: 20px; margin: 8px 0; }
+  ul.where li { margin: 6px 0; }
+  footer { color: var(--muted); font-size: 14px; padding: 18px 0 40px; border-top: 1px solid var(--line); margin-top: 26px; }
+  .cta { display: inline-block; margin-top: 8px; padding: 10px 16px; border-radius: 10px; background: var(--brand-2); color: #fff; text-decoration: none; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .cta { color: #111418; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="https://fhtorch.com/?utm_source=github&amp;utm_medium=tool&amp;utm_campaign=flashback-arrestor-selector">FHtorch</a>
+    <h1>Flashback arrestor selector</h1>
+    <p class="lead">Choose the gas, where the device goes and the connection thread to find the matching FHtorch flashback arrestor or check valve, with its max flow and max inlet pressure. Covers 288, B288, 388, 488, 588 and H188 flashback arrestors and 88-3 check valves.</p>
+  </header>
+
+  <section class="card" aria-labelledby="pick-title">
+    <h2 id="pick-title" style="margin-top:0">Find a model</h2>
+    <form onsubmit="return false">
+      <div>
+        <label for="gas">Gas line</label>
+        <select id="gas"><option value="">Any</option><option value="Oxygen">Oxygen</option><option value="Fuel gas">Fuel gas</option></select>
+      </div>
+      <div>
+        <label for="where">Where it goes</label>
+        <select id="where"><option value="">Any</option><option value="regulator">Regulator outlet</option><option value="torch">Torch or torch handle</option><option value="hose">Hose line (inline)</option></select>
+      </div>
+      <div>
+        <label for="conn">Connection</label>
+        <select id="conn"><option value="">Any</option></select>
+      </div>
+      <div>
+        <label for="dev">Type</label>
+        <select id="dev"><option value="">Any</option><option value="flashback arrestor">Flashback arrestor</option><option value="check valve">Check valve</option></select>
+      </div>
+    </form>
+    <p class="summary" id="sum" aria-live="polite"></p>
+    <div class="scroll"><table id="res"></table></div>
+    <p class="note">In this list, oxygen models have right-hand (R.H.) threads and fuel gas models left-hand (L.H.) threads. cfh = L/h / 28.317; psi = bar × 14.504. Values are catalog values for FHtorch products: always follow your torch and regulator manufacturer's instructions and local safety rules.</p>
+  </section>
+
+  <section class="card" aria-labelledby="where-title">
+    <h2 id="where-title" style="margin-top:0">Where each type goes</h2>
+    <ul class="where" id="where-list"></ul>
+    <p class="note" id="extra"></p>
+  </section>
+
+  <section aria-labelledby="list-title">
+    <h2 id="list-title">All models</h2>
+    <p class="note">Download the data: <a href="data/flashback-arrestors.csv">CSV</a> · <a href="data/flashback-arrestors.json">JSON</a> (CC BY 4.0, credit "FHtorch (fhtorch.com)").</p>
+    <div id="chart"></div>
+  </section>
+
+  <section class="card">
+    <h2 style="margin-top:0">About FHtorch</h2>
+    <p>FHtorch supplies distributors and welding supply stores with cutting torches, welding torches, cutting and welding tips, flashback arrestors and torch kits, made at our family-owned factory in Ningbo, China. MOQ 100–300 units per model; custom logo marking (OEM) available.</p>
+    <a class="cta" href="https://fhtorch.com/contact/?utm_source=github&amp;utm_medium=tool&amp;utm_campaign=flashback-arrestor-selector">Request a quote</a>
+  </section>
+
+  <footer>
+    <p>Data from FHtorch product pages, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Code: MIT. Source: <a href="https://github.com/fhtorch/flashback-arrestor-selector">github.com/fhtorch/flashback-arrestor-selector</a>.</p>
+    <p>More free FHtorch tools: <a href="https://fhtorch.github.io/cutting-tip-chart/">cutting tip size chart and picker</a> · <a href="https://fhtorch.github.io/welding-tip-chart/">welding tip size chart and finder</a></p>
+  </footer>
+</div>
+<script src="data/flashback-arrestors.js"></script>
+<script>
+(function () {
+  var D = window.FH_FA || {models: [], series: [], built_in_torch: null, guide_url: ""};
+  var M = D.models;
+  var UTM = "?utm_source=github&utm_medium=tool&utm_campaign=flashback-arrestor-selector";
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); }
+  function link(url, text) { return '<a href="' + esc(url + UTM) + '">' + esc(text) + "</a>"; }
+  function gas(g) { return '<span class="gas ' + (g === "Oxygen" ? "ox" : "fuel") + '">' + esc(g) + "</span>"; }
+  function flow(m) { return m.max_flow_lph == null ? "Not listed" : m.max_flow_lph.toLocaleString("en-US") + " L/h (" + m.max_flow_cfh + " cfh)"; }
+  function pres(m) { return m.max_inlet_bar == null ? "Not listed" : m.max_inlet_bar + " bar (" + m.max_inlet_psi + " psi)"; }
+
+  // connection options, in the order they first appear
+  var conns = [];
+  M.forEach(function (m) { if (conns.indexOf(m.connection) < 0) conns.push(m.connection); });
+  conns.forEach(function (c) { var o = document.createElement("option"); o.value = c; o.textContent = c; $("conn").appendChild(o); });
+
+  function head() {
+    return "<tr><th>Model</th><th>Type</th><th>Gas</th><th>Where</th><th>Inlet</th><th>Outlet</th><th>Max flow</th><th>Max inlet pressure</th><th>Other gas line</th></tr>";
+  }
+  function row(m) {
+    return "<tr><td class=\"nw\"><strong>" + link(m.source_url, m.model) + "</strong></td><td>" + esc(m.device) + "</td><td>" + gas(m.gas) + "</td>" +
+      "<td>" + esc(m.mounting) + "</td><td class=\"nw\">" + esc(m.inlet) + "</td><td class=\"nw\">" + esc(m.outlet) + "</td>" +
+      "<td class=\"nw\">" + flow(m) + "</td><td class=\"nw\">" + pres(m) + "</td><td class=\"nw\">" + esc(m.other_gas_model || "–") + "</td></tr>";
+  }
+
+  function update() {
+    var g = $("gas").value, w = $("where").value, c = $("conn").value, dv = $("dev").value;
+    var hits = M.filter(function (m) {
+      return (!g || m.gas === g) && (!w || m.mount_keys.indexOf(w) >= 0) && (!c || m.connection === c) && (!dv || m.device === dv);
+    });
+    if (!hits.length) {
+      $("sum").innerHTML = "No FHtorch model in this list matches. " + '<a href="https://fhtorch.com/contact/' + UTM + '">Ask FHtorch</a> about other threads.';
+      $("res").innerHTML = "";
+      return;
+    }
+    var any = !g && !w && !c && !dv;
+    $("sum").textContent = hits.length + (hits.length > 1 ? " models" : " model") +
+      (any ? " in this list. Narrow it down by gas, position, thread or type." : (hits.length > 1 ? " match:" : " matches:"));
+    $("res").innerHTML = head() + hits.map(row).join("");
+  }
+  ["gas", "where", "conn", "dev"].forEach(function (id) { $(id).addEventListener("change", update); });
+
+  // where each type goes
+  $("where-list").innerHTML = D.series.map(function (s) {
+    var ms = M.filter(function (m) { return m.series === s.series; }).map(function (m) { return m.model; });
+    return "<li><strong>" + link(s.source_url, s.series) + "</strong> <span class=\"tag\">" + esc(s.device) + "</span> <span class=\"tag\">" + esc(s.where) + "</span><br>" +
+      esc(s.note) + " <span class=\"note\">Models: " + esc(ms.join(", ")) + ".</span></li>";
+  }).join("");
+  var extra = [];
+  if (D.guide_url) extra.push('Flashback arrestor or check valve? Read ' + link(D.guide_url, "flashback arrestor vs check valve") + ".");
+  if (D.built_in_torch) extra.push("FHtorch also makes a " + link(D.built_in_torch.source_url, D.built_in_torch.name.toLowerCase()) + " (model " + esc(D.built_in_torch.model) + ").");
+  $("extra").innerHTML = extra.join(" ");
+
+  // all models, by series
+  $("chart").innerHTML = D.series.map(function (s) {
+    var rows = M.filter(function (m) { return m.series === s.series; });
+    return "<div class=\"card\"><h3>" + esc(s.series) + " <span class=\"tag\">" + esc(s.device) + "</span> <span class=\"tag\">" + esc(s.where) + "</span></h3>" +
+      "<p class=\"note\">" + esc(s.note) + " " + link(s.source_url, "Product page") + "</p>" +
+      "<div class=\"scroll\"><table>" + head() + rows.map(row).join("") + "</table></div></div>";
+  }).join("");
+
+  update();
+})();
+</script>
+</body>
+</html>
