@@ -1,21 +1,21 @@
-model,series,device,gas,mounting,max_flow_lph,max_flow_cfh,max_inlet_bar,max_inlet_psi,inlet,outlet,connection,hand,other_gas_model,source_url
-288-R,288,flashback arrestor,Oxygen,Regulator,7000,247,10.0,145.0,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,288-L,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-288-L,288,flashback arrestor,Fuel gas,Regulator,2600,92,1.5,21.8,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,288-R,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-B288-RGB,B288,flashback arrestor,Oxygen,Regulator,7000,247,10.0,145.0,"BSP 3/8"" R.H.","BSP 3/8"" R.H.","BSP 3/8""",R.H.,B288-LGB,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-B288-LGB,B288,flashback arrestor,Fuel gas,Regulator,2600,92,1.5,21.8,"BSP 3/8"" L.H.","BSP 3/8"" L.H.","BSP 3/8""",L.H.,B288-RGB,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-88-3-R,88-3,check valve,Oxygen,Torch,,,,,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,88-3-L,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-88-3-L,88-3,check valve,Fuel gas,Torch,,,,,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,88-3-R,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
-388-R,388,flashback arrestor,Oxygen,Hose,7000,247,10.0,145.0,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,388-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-388-L,388,flashback arrestor,Fuel gas,Hose,2600,92,1.5,21.8,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,388-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-488-R,488,flashback arrestor,Oxygen,Hose,7000,247,10.0,145.0,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,488-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-488-L,488,flashback arrestor,Fuel gas,Hose,2600,92,1.5,21.8,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,488-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-588-R,588,flashback arrestor,Oxygen,Torch / regulator,7000,247,10.0,145.0,"9/16""×18 R.H.",–,"9/16""×18",R.H.,588-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-588-L,588,flashback arrestor,Fuel gas,Torch / regulator,2600,92,1.5,21.8,"9/16""×18 L.H.",–,"9/16""×18",L.H.,588-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
-H188-R,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,H188-L,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-L,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,H188-R,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-RGB,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,"BSP 3/8"" R.H.","BSP 3/8"" R.H.","BSP 3/8""",R.H.,H188-LGB,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-LGB,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,"BSP 3/8"" L.H.","BSP 3/8"" L.H.","BSP 3/8""",L.H.,H188-RGB,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-AR,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,"5/8""×18 R.H.","5/8""×18 R.H.","5/8""×18",R.H.,H188-AL,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-AL,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,"5/8""×18 L.H.","5/8""×18 L.H.","5/8""×18",L.H.,H188-AR,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-RA,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,"BSP 1/4"" R.H.","BSP 1/4"" R.H.","BSP 1/4""",R.H.,H188-LA,https://fhtorch.com/product/h188-torch-flashback-arrestors/
-H188-LA,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,"BSP 1/4"" L.H.","BSP 1/4"" L.H.","BSP 1/4""",L.H.,H188-RA,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+model,series,device,gas,mounting,max_flow_lph,max_flow_cfh,max_inlet_bar,max_inlet_psi,max_inlet_bar_other_fuel_gases,max_inlet_psi_other_fuel_gases,inlet,outlet,connection,hand,other_gas_model,source_url
+288-R,288,flashback arrestor,Oxygen,Regulator,7000,247,10.0,145.0,,,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,288-L,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+288-L,288,flashback arrestor,Fuel gas,Regulator,2600,92,1.5,21.8,,,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,288-R,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+B288-RGB,B288,flashback arrestor,Oxygen,Regulator,7000,247,10.0,145.0,,,"BSP 3/8"" R.H.","BSP 3/8"" R.H.","BSP 3/8""",R.H.,B288-LGB,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+B288-LGB,B288,flashback arrestor,Fuel gas,Regulator,2600,92,1.5,21.8,,,"BSP 3/8"" L.H.","BSP 3/8"" L.H.","BSP 3/8""",L.H.,B288-RGB,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+88-3-R,88-3,check valve,Oxygen,Torch,,,,,,,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,88-3-L,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+88-3-L,88-3,check valve,Fuel gas,Torch,,,,,,,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,88-3-R,https://fhtorch.com/product/regulator-flashback-arrestors-check-valves/
+388-R,388,flashback arrestor,Oxygen,Hose,7000,247,10.0,145.0,,,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,388-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+388-L,388,flashback arrestor,Fuel gas,Hose,2600,92,1.5,21.8,,,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,388-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+488-R,488,flashback arrestor,Oxygen,Hose,7000,247,10.0,145.0,,,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,488-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+488-L,488,flashback arrestor,Fuel gas,Hose,2600,92,1.5,21.8,,,Φ8 mm hose,Φ8 mm hose,Φ8 mm hose,,488-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+588-R,588,flashback arrestor,Oxygen,Torch / regulator,7000,247,10.0,145.0,,,"9/16""×18 R.H.",–,"9/16""×18",R.H.,588-L,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+588-L,588,flashback arrestor,Fuel gas,Torch / regulator,2600,92,1.5,21.8,,,"9/16""×18 L.H.",–,"9/16""×18",L.H.,588-R,https://fhtorch.com/product/cartridge-flashback-arrestors-388-488-588/
+H188-R,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,,,"9/16""×18 R.H.","9/16""×18 R.H.","9/16""×18",R.H.,H188-L,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-L,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,5.0,72.5,"9/16""×18 L.H.","9/16""×18 L.H.","9/16""×18",L.H.,H188-R,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-RGB,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,,,"BSP 3/8"" R.H.","BSP 3/8"" R.H.","BSP 3/8""",R.H.,H188-LGB,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-LGB,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,5.0,72.5,"BSP 3/8"" L.H.","BSP 3/8"" L.H.","BSP 3/8""",L.H.,H188-RGB,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-AR,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,,,"5/8""×18 R.H.","5/8""×18 R.H.","5/8""×18",R.H.,H188-AL,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-AL,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,5.0,72.5,"5/8""×18 L.H.","5/8""×18 L.H.","5/8""×18",L.H.,H188-AR,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-RA,H188,flashback arrestor,Oxygen,Between torch handle and hoses,7000,247,10.0,145.0,,,"BSP 1/4"" R.H.","BSP 1/4"" R.H.","BSP 1/4""",R.H.,H188-LA,https://fhtorch.com/product/h188-torch-flashback-arrestors/
+H188-LA,H188,flashback arrestor,Fuel gas,Between torch handle and hoses,2600,92,1.5,21.8,5.0,72.5,"BSP 1/4"" L.H.","BSP 1/4"" L.H.","BSP 1/4""",L.H.,H188-RA,https://fhtorch.com/product/h188-torch-flashback-arrestors/

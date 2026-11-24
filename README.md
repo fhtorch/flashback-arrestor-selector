@@ -30,7 +30,8 @@ Made by [FHtorch](https://fhtorch.com/?utm_source=github&utm_medium=readme&utm_c
 | `gas` | `Oxygen` or `Fuel gas`, as listed |
 | `mounting` | Where it goes, as listed (`Regulator`, `Torch`, `Hose`, `Torch / regulator`, or between torch handle and hoses) |
 | `max_flow_lph`, `max_flow_cfh` | Max flow |
-| `max_inlet_bar`, `max_inlet_psi` | Max inlet pressure |
+| `max_inlet_bar`, `max_inlet_psi` | Max inlet pressure (for fuel gas models with two values: the acetylene value) |
+| `max_inlet_bar_other_fuel_gases`, `max_inlet_psi_other_fuel_gases` | Max inlet pressure for fuel gases other than acetylene, where the page lists one (H188 fuel gas models) |
 | `inlet`, `outlet` | Threads as listed; `connection` and `hand` split them for filtering |
 | `other_gas_model` | Same series and thread, for the other gas line |
 | `source_url` | The page the row comes from |
@@ -100,13 +101,13 @@ Fits between the torch handle and the hoses. A filter protects it from dirt part
 | Model | Gas | Mounting | Max flow (L/h) | Max inlet pressure (bar) | Inlet | Outlet |
 |---|---|---|---|---|---|---|
 | H188-R | Oxygen | Between torch handle and hoses | 7000 | 10 | 9/16"×18 R.H. | 9/16"×18 R.H. |
-| H188-L | Fuel gas | Between torch handle and hoses | 2600 | 1.5 | 9/16"×18 L.H. | 9/16"×18 L.H. |
+| H188-L | Fuel gas | Between torch handle and hoses | 2600 | 1.5 (acetylene) / 5 (other fuel gases) | 9/16"×18 L.H. | 9/16"×18 L.H. |
 | H188-RGB | Oxygen | Between torch handle and hoses | 7000 | 10 | BSP 3/8" R.H. | BSP 3/8" R.H. |
-| H188-LGB | Fuel gas | Between torch handle and hoses | 2600 | 1.5 | BSP 3/8" L.H. | BSP 3/8" L.H. |
+| H188-LGB | Fuel gas | Between torch handle and hoses | 2600 | 1.5 (acetylene) / 5 (other fuel gases) | BSP 3/8" L.H. | BSP 3/8" L.H. |
 | H188-AR | Oxygen | Between torch handle and hoses | 7000 | 10 | 5/8"×18 R.H. | 5/8"×18 R.H. |
-| H188-AL | Fuel gas | Between torch handle and hoses | 2600 | 1.5 | 5/8"×18 L.H. | 5/8"×18 L.H. |
+| H188-AL | Fuel gas | Between torch handle and hoses | 2600 | 1.5 (acetylene) / 5 (other fuel gases) | 5/8"×18 L.H. | 5/8"×18 L.H. |
 | H188-RA | Oxygen | Between torch handle and hoses | 7000 | 10 | BSP 1/4" R.H. | BSP 1/4" R.H. |
-| H188-LA | Fuel gas | Between torch handle and hoses | 2600 | 1.5 | BSP 1/4" L.H. | BSP 1/4" L.H. |
+| H188-LA | Fuel gas | Between torch handle and hoses | 2600 | 1.5 (acetylene) / 5 (other fuel gases) | BSP 1/4" L.H. | BSP 1/4" L.H. |
 
 <!-- CHART:END -->
 

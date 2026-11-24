@@ -145,7 +145,14 @@
   function link(url, text) { return '<a href="' + esc(url + UTM) + '">' + esc(text) + "</a>"; }
   function gas(g) { return '<span class="gas ' + (g === "Oxygen" ? "ox" : "fuel") + '">' + esc(g) + "</span>"; }
   function flow(m) { return m.max_flow_lph == null ? "Not listed" : m.max_flow_lph.toLocaleString("en-US") + " L/h (" + m.max_flow_cfh + " cfh)"; }
-  function pres(m) { return m.max_inlet_bar == null ? "Not listed" : m.max_inlet_bar + " bar (" + m.max_inlet_psi + " psi)"; }
+  function pres(m) {
+    if (m.max_inlet_bar == null) return "Not listed";
+    if (m.max_inlet_bar_other_fuel_gases != null) {
+      return m.max_inlet_bar + " bar acetylene (" + m.max_inlet_psi + " psi)<br>" +
+        m.max_inlet_bar_other_fuel_gases + " bar other fuel gases (" + m.max_inlet_psi_other_fuel_gases + " psi)";
+    }
+    return m.max_inlet_bar + " bar (" + m.max_inlet_psi + " psi)";
+  }
 
   // connection options, in the order they first appear
   var conns = [];
